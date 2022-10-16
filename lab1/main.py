@@ -1,17 +1,19 @@
+import math
+
 import numpy as np
 
 
 CONST_LEFT = -5
 CONST_RIGHT = 0
-CONST_EPS = 1e-3
+CONST_EPS = 0.1
 CONST_POINTS = 1000
 
 def calc_func(x):
-    return x**2 - 9  #x^2-9
+    return 3*x + math.cos(x) + 1
 
 
 def derivative_function(x):
-    return x*2      #2x
+    return 3 - math.sin(x)
 
 
 def dichotomy():
@@ -38,6 +40,7 @@ def dichotomy():
             if delta < CONST_EPS:
                 is_last_operation = True
         print(f' x: {(right+left)/2}')
+        print(step)
 
 
 def relaxation():
