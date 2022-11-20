@@ -100,7 +100,7 @@ def gauss_method(matrix, b):
     return result
 
 
-# Jacobi
+# Jacobi method
 def get_vector_norm(x):
     return np.max(np.abs(x))
 
@@ -126,7 +126,7 @@ def jacobi_method(matrix, b, eps=EPS):
     return result
 
 
-#Seidel
+#Seidel method
 def seidel_method(matrix, b, eps=EPS):
     dimension = b.shape[0]
     result = np.ones(dimension)
